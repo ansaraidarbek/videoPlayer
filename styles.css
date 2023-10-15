@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("blackRose_background.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size:cover;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content{ 
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.30);
+    background: linear-gradient(102deg, rgba(75, 75, 75, 0.75) 0%, rgba(77, 74, 74, 0.36) 100%);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 80vw;
+    height: 98vh;
+    padding: 2vh 0;
+}
+
+
+h1, h2, p{
+    color: white;
+    margin: 10px;
+}
+
+hr{
+    width: 90%;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    width: 90%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+  
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+.flow{
+    display: grid;
+    gap: var(--flow--spacer, 1rem);
+}
+
+.page-header{
+    padding-block: 5rem;
+    margin-block-end: 5rem;
+    background-image: url("https://play-lh.googleusercontent.com/0rgPYj0GwZ6txpYZrzoMdhwzqg7vY6C9B-Ol7jlaz-Ox2rgpD4Tr82ZgDqkirrEohbGm=w600-h300-pc0xffffff-pd"),
+    linear-gradient(-25deg, rgb(0 0 0 / 0), rgb(0 0 0 / 1) 50%);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    color: white;
+}
+
+.page-title{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.sectiont-title{
+    margin-block: 4rem;
+}
+
+/* .media-container{
+    position: relative;
+} */
+
+.media-scroller,
+.media-group {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.25rem;
+}
+
+.media-container{
+    overflow:hidden;
+    margin-top: 20px;
+    width: 90%;
+    position: relative;
+}
+
+.media-scroller{
+    grid-auto-columns: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 0 3rem;
+    scroll-padding-inline: 3rem;
+}
+
+.media-group{
+    grid-auto-columns: 1fr;
+}
+
+.media-element {
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.media-element > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.next,
+.previous{
+    display: none;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    background: rgb(0 0 0 / 0);
+    padding: 1rem;
+    opacity: 0;
+}
+
+.next{
+    right: 0;
+}
+
+.previous{
+    left: 0;
+}
+
+.media-scroller:hover :where(.next, .previous){
+    opacity: 1;
+}
+
+:where(.next, .previous):hover{
+    background: rgb(0 0 0 / .3);
+}
+
+/* .media-scroller:has(:target:not(:first-child))
+  .media-group:first-of-type
+  .next {
+  display: none;
+} */
+
+:where(.next, .previous) > svg{
+    transition: transform 75ms linear;
+    transform: scale(1);
+}
+
+:where(.next, .previous):hover > svg{
+    transform: scale(1.2);
+}
+
+/* .media-group:first-child:not(:target){
+    border: red 3px solid;
+} */
+
+#group1:hover :where(.next) {
+    display: flex;
+  }
+
+.media-group:target :where(.next, .previous){
+    display: flex;
+}
+
+.navigation-indecators{
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    gap:3px;
+    top: -1rem;
+    right: 2rem;
+}
+
+.navigation-indecators > *{
+    width: 1rem;
+    height: 3px;
+    background: white;
+    opacity: 0.5;
+}
+
+.media-group:nth-child(1):target ~ .navigation-indecators > *:nth-child(1){
+    opacity: 1;
+}
+
+.media-group:nth-child(2):target ~ .navigation-indecators > *:nth-child(2){
+    opacity: 1;
+}
+
+.media-group:nth-child(3):target ~ .navigation-indecators > *:nth-child(3){
+    opacity: 1;
+}
+
+.media-scroller:hover .navigation-indecators{
+    opacity: 1;
+}
+
+.svgOptions{
+    display: none;
+}
+
+img{
+    cursor: pointer;
+}
+
+img:hover{
+    transform: scale(1.05);
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <h1>My jabbawokeez playlists</h1>
+        <p>12 best jbWz performances!!!</p>
+        <hr>
+        <div class="container">
+            <video id ='player' class="responsive-video" controls type="video/ogg">
+               <source src="https://drive.google.com/uc?export=download&id=1mE21YwnC7voGO0PkOVBXirvGxerrhHcW">
+            </video>
+                <!-- https://drive.google.com/uc?export=download&id=1RhhabD-XTzrt9dtwHIoYVcyTSSkhOvr1 -->
+        </div>
+
+
+        <div class="media-container">
+            <div class="media-scroller">
+                <!-- Group 1 -->
+                <div class="media-group" id="group-1">
+                    <div class="media-element">
+                        <img
+                        src="/videos/img1.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1mE21YwnC7voGO0PkOVBXirvGxerrhHcW">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img2.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=11cChTrZFgSbtufkUC_ukiTxrBczEY-gq">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img3.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1fhHOHwgQgK5vrUUUkgBPrwNuijwNFgIs">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img4.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=15oNjvpHsaXGY0SaAju-wcsyGLS2bf8k2">
+                    </div>
+                    <a class="next" href="#group-2" aria-label="next">
+                        <svg>
+                            <use href="#next"></use>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Group 2 -->
+                <div class="media-group" id="group-2">
+                    <a class="previous" href="#group-1" aria-label="previous">
+                        <svg>
+                            <use href="#previous"></use>
+                        </svg>
+                    </a>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img5.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1b5Dn93-X07MgGoAYLkMMCNfxdX3zG_kC">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img6.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=19td9hYmT21TVMEQGHWyg0o8GcexKB-Sg">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img7.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=15RQqlY1LtFE5p4gNEd_4sjzT9D7g_50e">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img8.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1bh7KQiqRZo5SL7WssABoEurlXSog7bht">
+                    </div>
+                    <a class="next" href="#group-3" aria-label="next">
+                        <svg>
+                            <use href="#next"></use>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Group 3 -->
+                <div class="media-group" id="group-3">
+                    <a class="previous" href="#group-2" aria-label="previous">
+                        <svg>
+                            <use href="#previous"></use>
+                        </svg>
+                    </a>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img9.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1CoLCOnKqSHv6_xLFIEa0Cd5T7HiY_7IY">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img10.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1gef1rcxwelHomWOEc3q0D7kiJDCa2NJu">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img11.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1vB0S9h4dn0ASOBqnC-KuJDdPmwJGdu_N">
+                    </div>
+                    <div class="media-element">
+                        <img
+                        src="/videos/img12.jpg"
+                        alt="jbWz video"
+                        data-path="https://drive.google.com/uc?export=download&id=1WNz737mK6mJ2cjtrOp0548wCA_EeibL9">
+                    </div>
+                </div>
+    
+                <div class="navigation-indecators">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    
+        <section class="svgOptions">
+            <svg>
+                <symbol id="next" viewBox="0 0 256 512">
+                  <path fill="white"
+                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+                </symbol>
+            
+                <symbol id="previous" viewBox="0 0 256 512">
+                  <path fill="white"
+                    d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                </symbol>
+              </svg>
+            </section>
+
+    </div>
+    <script>
+        const video = document.getElementById('player')
+        const imgs = document.querySelectorAll('img')
+        imgs.forEach((img)=>{
+            img.addEventListener("click", (e)=>{
+                e.preventDefault()
+                video.src = e.target.getAttribute('data-path')
+            })
+        })
+    </script>
+</body>
+
+</html>
