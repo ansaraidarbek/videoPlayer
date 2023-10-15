@@ -170,6 +170,7 @@
                 e.preventDefault()
                 state = e.target.getAttribute('data-id')
                 video.src = e.target.getAttribute('data-path')
+                video.setAttribute('autoplay', false)
             })
         })
 
