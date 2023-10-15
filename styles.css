@@ -189,9 +189,15 @@ svg {
     border: red 3px solid;
 } */
 
-#group1:hover :where(.next) {
+.media-group:first-child :where(.next, .previous) {
     display: flex;
   }
+
+.media-scroller:has(:target:not(:first-child))
+  .media-group:first-of-type
+    .next{
+        display: none;
+    }
 
 .media-group:target :where(.next, .previous){
     display: flex;
